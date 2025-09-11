@@ -30,7 +30,7 @@ opencompass -w logs/test/${EXP_NAME} \
     -r \
     --retry 1 \
     --dump-eval-details False \
-    --max-out-len 32768 \
+    --max-out-len 4096 \
     --datasets \
-    mmlu_gen IFEval_gen gsm8k_gen math_gen humaneval_gen mbpp_gen hellaswag_gen gpqa_gen \
+    mmlu_zero_shot_gen_47e2c0 IFEval_gen_3321a3 gsm8k_gen_1d7fe4 math_gen_265cce humaneval_gen_8e312c mbpp_gen_830460 hellaswag_gen_6faab5 gpqa_openai_simple_evals_gen_5aeece \
     --hf-type chat --models ${EXP_NAME} --max-num-worker ${MAX_NUM_WORKER}
