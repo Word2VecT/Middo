@@ -45,7 +45,7 @@ pip install vllm
 # Install DataDreamer for data synthetic
 cd ../datadreamer
 conda deactivate
-conda create -n dd python=3.10 -y
+conda create -n dd python=3.11 -y
 conda activate dd
 pip install -r requirements.txt
 pip install datadreamer.dev
