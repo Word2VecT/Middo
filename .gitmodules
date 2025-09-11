@@ -4,3 +4,6 @@
 [submodule "opencompass"]
 	path = opencompass
 	url = https://github.com/open-compass/opencompass.git
+[submodule "datadreamer"]
+	path = datadreamer
+	url = git@github.com:Word2VecT/DataDreamer.git
