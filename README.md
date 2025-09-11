@@ -17,7 +17,7 @@ We introduce **Middo**, a self-evolving **M**odel-**i**nformed **d**ynamic **d**
 
 ![Middo](imgs/Middo.png)
 
-Middo consistently enhances the quality of seed data and boosts LLM's performance with improving accuracy by $7.15\%$ on average while maintaining the original dataset scale.
+Middo consistently enhances the quality of seed data and boosts LLM's performance with improving accuracy by $7.15%$ on average while maintaining the original dataset scale.
 
 ![Result](imgs/result.png)
 
@@ -55,7 +55,7 @@ conda activate oc
 pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu124
 pip install pyarrow==20.0.0
 pip install -e "."
-pip install vllm
+pip install vllm flashinfer-python==0.2.8
 
 # Install DataDreamer for data synthetic
 cd ../datadreamer
@@ -68,7 +68,7 @@ pip install datadreamer.dev
 
 ## 📚 Data
 
-View data from [Middo-Optimized](https://huggingface.co/datasets/QizhiPei/MathFusionQA), edit [`dataset_info.jsonl`](LLaMA-Factory/data/dataset_info.json) file and training yaml script (e.g. `train_llama.yaml`) file according to LLaMA-Factory [Data Preparation](https://github.com/hiyouga/LLaMA-Factory#data-preparation).
+View data from huggingface [Word2Li/MiddOptimized](https://huggingface.co/datasets/Word2Li/MiddOptimized) then convert each split to `.json` or `.jsonl` file. Edit [`dataset_info.jsonl`](LLaMA-Factory/data/dataset_info.json) file and training yaml script (e.g. `train_llama.yaml`) file according to LLaMA-Factory [Data Preparation](https://github.com/hiyouga/LLaMA-Factory#data-preparation).
 
 ## 🤖 Training
 
