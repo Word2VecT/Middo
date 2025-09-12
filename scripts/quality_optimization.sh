@@ -34,6 +34,5 @@ done
 source activate dd
 
 python quality_synthetic.py \
-    --file_path $MODEL_PATH \
     --base_url $BASE_URL \
     --skey $SKEY
