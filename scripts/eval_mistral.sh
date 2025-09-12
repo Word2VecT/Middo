@@ -1,3 +1,5 @@
+[ -z "$MODEL_PATH" ] && MODEL_PATH="saves/Mistral-7B-v0.3-Middo-WizardLM"
+
 source activate oc
 
 cd opencompass

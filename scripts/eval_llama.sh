@@ -1,3 +1,5 @@
+[ -z "$MODEL_PATH" ] && MODEL_PATH="saves/Llama3.1-8B-Middo-Alpaca"
+
 source activate oc
 
 cd opencompass

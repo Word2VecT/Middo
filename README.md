@@ -98,12 +98,32 @@ export MODEL_PATH=<your_sft_model_path>
 bash scripts/eval_llama.sh # or scripts/eval_mistral.sh
 ```
 
-## ⚙️ Dataset Collection
+## ⚙️ Data Optimization Pipeline
 
 To collect your own Middo data, please refer to the following scripts:
 
 ```bash
+# Complexity Optimization
+export PRE_MODEL_PATH=<your_model_path_before_training>
+export CURRENT_MODEL_PATH=<your_model_path_after_training>
+export DATASET=<dataset_name_listed_in_dataset_info>
+export DATASET_PATH=<dataset_path>
+export BASE_URL=<your_openai_base_url>
+export SKEY=<your_openai_skey>
+bash scripts/complexity_pipeline.sh
 
+# Diversity Optimization
+bash scripts/diversity_pipeline.sh
+
+# Quality Optimization
+bash scripts/quality_pipeline.sh
+
+# Complexity Optimization
+bash scripts/complexity_optimization.sh
+
+# Merge Data
+python json_intersection.py complexity_remain.json  quality_remain.json -o remain.json
+python json_merge.py remain.json complexity.json diversity.json quality.json  -o optimized.json
 ```
 
 ## 🙏 Acknowledgements
