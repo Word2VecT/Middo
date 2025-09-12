@@ -103,13 +103,14 @@ bash scripts/eval_llama.sh # or scripts/eval_mistral.sh
 To collect your own Middo data, please refer to the following scripts:
 
 ```bash
-# Complexity Optimization
 export PRE_MODEL_PATH=<your_model_path_before_training>
 export CURRENT_MODEL_PATH=<your_model_path_after_training>
 export DATASET=<dataset_name_listed_in_dataset_info>
 export DATASET_PATH=<dataset_path>
 export BASE_URL=<your_openai_base_url>
 export SKEY=<your_openai_skey>
+
+# Complexity Optimization
 bash scripts/complexity_pipeline.sh
 
 # Diversity Optimization
