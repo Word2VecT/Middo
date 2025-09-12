@@ -119,9 +119,6 @@ bash scripts/diversity_pipeline.sh
 # Quality Optimization
 bash scripts/quality_pipeline.sh
 
-# Complexity Optimization
-bash scripts/complexity_optimization.sh
-
 # Merge Data
 python json_intersection.py complexity_remain.json  quality_remain.json -o remain.json
 python json_merge.py remain.json complexity.json diversity.json quality.json  -o optimized.json
