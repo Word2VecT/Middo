@@ -17,17 +17,17 @@ We introduce **Middo**, a self-evolving **M**odel-**i**nformed **d**ynamic **d**
 
 ![Middo](imgs/Middo.png)
 
-Middo consistently enhances the quality of seed data and boosts LLM's performance with improving accuracy by $7.15%$ on average while maintaining the original dataset scale.
+Middo consistently enhances the quality of seed data and boosts LLM's performance with improving accuracy by $7.15\%$ on average while maintaining the original dataset scale.
 
 ![Result](imgs/result.png)
 
-We release Midoo optimized (MiddOptimized) dataset and six corresponing models fine-tuned on one of dataset's split.
+We release Midoo optimized datasets (MiddOptimized)、Midoo only high quality datasets (MiddOnly) and corresponing models fine-tuned on one of MiddOptimized dataset's split.
 
 | Dataset/Model | Avg. Performance | Improvement | HuggingFace🤗 |
 | - | :-: | :-: | :-: |
 | MiddOptimized | - | - | [Dataset Link](https://huggingface.co/datasets/Word2Li/MiddOptimized) |
 | Llama3.1-8B-Middo-Alpaca | $39.63$ | $7.15$ | [Model Link](https://huggingface.co/Word2Li/Llama3.1-8B-Middo-Alpaca) |
-| Llama3.1-8B-Middo-Alpaca-4o-mini | $42.96$ | $2.2$ | [Model Link](https://huggingface.co/Word2Li/Llama3.1-8B-Middo-Alpaca-4o-mini) |
+| Llama3.1-8B-Middo-Alpaca-4o-mini | $42.96$ | $2.20$ | [Model Link](https://huggingface.co/Word2Li/Llama3.1-8B-Middo-Alpaca-4o-mini) |
 | Llama3.1-8B-Middo-Wizard | $42.80$ | $3.84$ | [Model Link](https://huggingface.co/Word2Li/Llama3.1-8B-Middo-Wizard) |
 | Mistral-v0.3-Middo-Alpaca | $29.72$ | $4.75$ | [Model Link](https://huggingface.co/Word2Li/Mistral-v0.3-Middo-Alpaca) |
 | Mistral-v0.3-Middo-Alpaca-4o-mini | $35.08$ | $0.52$ | [Model Link](https://huggingface.co/Word2Li/Mistral-v0.3-Middo-Alpaca-4o-mini) |
@@ -53,8 +53,6 @@ pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https
 pip install pyarrow==20.0.0 av==14.4.0 deepspeed==0.16.9 soxr==0.5.0.post1 Cython scikit-build-core setuptools_scm
 pip install -e ".[torch,metrics]" --no-build-isolation
 pip install vllm
-# Install Liger-Kernel and FlashAttention for acclerating
-pip install liger-kernel
 pip install https://github.com/Dao-AILab/flash-attention/releases/download/v2.7.4.post1/flash_attn-2.7.4.post1+cu12torch2.4cxx11abiFALSE-cp310-cp310-linux_x86_64.whl
 
 # Install opencompass for evaluation
@@ -100,7 +98,13 @@ export MODEL_PATH=<your_sft_model_path>
 bash scripts/eval_llama.sh # or scripts/eval_mistral.sh
 ```
 
-## 📖 Data
+## ⚙️ Dataset Collection
+
+To collect your own Middo data, please refer to the following scripts:
+
+```bash
+
+```
 
 ## 🙏 Acknowledgements
 
