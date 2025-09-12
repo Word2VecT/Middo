@@ -21,7 +21,17 @@ Middo consistently enhances the quality of seed data and boosts LLM's performanc
 
 ![Result](imgs/result.png)
 
-We release six optimized datasets and corresponing models fine-tuned on these dataset.
+We release Midoo optimized (MiddOptimized) dataset and six corresponing models fine-tuned on one of dataset's split.
+
+| Dataset/Model | Avg. Performance | Improvement | HuggingFace🤗 |
+| - | :-: | :-: | :-: |
+| MiddOptimized | - | - | [Dataset Link](https://huggingface.co/datasets/Word2Li/MiddOptimized) |
+| Llama3.1-8B-Middo-Alpaca | $39.63$ | $7.15$ | [Model Link](https://huggingface.co/Word2Li/Llama3.1-8B-Middo-Alpaca) |
+| Llama3.1-8B-Middo-Alpaca-4o-mini | $42.96$ | $2.2$ | [Model Link](https://huggingface.co/Word2Li/Llama3.1-8B-Middo-Alpaca-4o-mini) |
+| Llama3.1-8B-Middo-Wizard | $42.80$ | $3.84$ | [Model Link](https://huggingface.co/Word2Li/Llama3.1-8B-Middo-Wizard) |
+| Mistral-v0.3-Middo-Alpaca | $29.72$ | $4.75$ | [Model Link](https://huggingface.co/Word2Li/Mistral-v0.3-Middo-Alpaca) |
+| Mistral-v0.3-Middo-Alpaca-4o-mini | $35.08$ | $0.52$ | [Model Link](https://huggingface.co/Word2Li/Mistral-v0.3-Middo-Alpaca-4o-mini) |
+| Mistral-v0.3-Middo-Wizard | 27.9 | 43.4 | [Model Link](https://huggingface.co/Word2Li/Mistral-v0.3-Middo-Wizard) |
 
 ## 🎯 Quick Start
 
@@ -56,6 +66,8 @@ pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https
 pip install pyarrow==20.0.0
 pip install -e "."
 pip install vllm flashinfer-python==0.2.8
+git clone git@github.com:open-compass/human-eval.git
+cd human-eval && pip install -e .
 
 # Install DataDreamer for data synthetic
 cd ../datadreamer
@@ -63,12 +75,11 @@ conda deactivate
 conda create -n dd python=3.10 -y
 conda activate dd
 pip install -r requirements.txt
-pip install datadreamer.dev
 ```
 
 ## 📚 Data
 
-View data from huggingface [Word2Li/MiddOptimized](https://huggingface.co/datasets/Word2Li/MiddOptimized) then convert each split to `.json` or `.jsonl` file. Edit [`dataset_info.jsonl`](LLaMA-Factory/data/dataset_info.json) file and training yaml script (e.g. `train_llama.yaml`) file according to LLaMA-Factory [Data Preparation](https://github.com/hiyouga/LLaMA-Factory#data-preparation).
+View and download all data from huggingface [Word2Li/MiddOptimized](https://huggingface.co/datasets/Word2Li/MiddOptimized) then convert each split to `.json` or `.jsonl` file. Regist data in `dataset_info.jsonl` file and edit training yaml script (e.g. [`train_llama.yaml`](scripts/train_llama.yaml)) file according to LLaMA-Factory [Data Preparation](https://github.com/hiyouga/LLaMA-Factory#data-preparation).
 
 ## 🤖 Training
 
@@ -77,7 +88,7 @@ Our training codes depend on [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Fa
 ```bash
 cd LLaMA-Factory
 conda activate lf
-llamafactory-cli train train_llama.yaml
+llamafactory-cli train train_llama.yaml # or train_mistral.yaml
 ```
 
 ## 📊 Evaluation
@@ -85,10 +96,11 @@ llamafactory-cli train train_llama.yaml
 Our training codes depend on [OpenCompass](https://github.com/hiyouga/LLaMA-Factory). You need to first download the model from HuggingFace, or SFT the model on your own.
 
 ```bash
-cd opencompass
-conda activate oc
-
+export MODEL_PATH=<your_sft_model_path>
+bash scripts/eval_llama.sh # or scripts/eval_mistral.sh
 ```
+
+## 📖 Data
 
 ## 🙏 Acknowledgements
 
