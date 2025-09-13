@@ -68,7 +68,7 @@ git clone git@github.com:open-compass/human-eval.git
 cd human-eval && pip install -e .
 
 # Install DataDreamer for data synthetic
-cd ../datadreamer
+cd ../../datadreamer
 conda deactivate
 conda create -n dd python=3.10 -y
 conda activate dd
