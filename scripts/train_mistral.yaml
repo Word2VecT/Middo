@@ -11,7 +11,7 @@ use_fast_tokenizer: true
 flash_attn: fa2
 
 ### dataset
-dataset: Middo-Optimized-Mistral-WizardLM
+dataset: MiddOptimized-mistal_wizard
 template: default
 cutoff_len: 4096
 overwrite_cache: true
@@ -36,11 +36,3 @@ lr_scheduler_type: cosine
 warmup_ratio: 0.03
 bf16: true
 ddp_timeout: 180000000
-
-report_to: swanlab
-use_swanlab: true
-swanlab_project: EMNLP2025
-swanlab_workspace: word2li
-swanlab_run_name: Mistral-7B-v0.3-Middo-WizardLM-lr1e-5
-swanlab_api_key: AnLWTMijcbd4cyEfundi3
-swanlab_logdir: /mnt/petrelfs/tangzinan/Middo/logs/swanlog
