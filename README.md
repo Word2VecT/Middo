@@ -31,7 +31,7 @@ We release Midoo optimized datasets (MiddOptimized)、Midoo only high quality da
 | Llama3.1-8B-Middo-Wizard | $42.80$ | $3.84$ | [Model Link](https://huggingface.co/Word2Li/Llama3.1-8B-Middo-Wizard) |
 | Mistral-v0.3-Middo-Alpaca | $29.72$ | $4.75$ | [Model Link](https://huggingface.co/Word2Li/Mistral-v0.3-Middo-Alpaca) |
 | Mistral-v0.3-Middo-Alpaca-4o-mini | $35.08$ | $0.52$ | [Model Link](https://huggingface.co/Word2Li/Mistral-v0.3-Middo-Alpaca-4o-mini) |
-| Mistral-v0.3-Middo-Wizard | 27.9 | 43.4 | [Model Link](https://huggingface.co/Word2Li/Mistral-v0.3-Middo-Wizard) |
+| Mistral-v0.3-Middo-Wizard | $38.56$ | $3.64$ | [Model Link](https://huggingface.co/Word2Li/Mistral-v0.3-Middo-Wizard) |
 
 ## 🎯 Quick Start
 
@@ -63,7 +63,7 @@ conda activate oc
 pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu124
 pip install pyarrow==20.0.0
 pip install -e "."
-pip install vllm flashinfer-python==0.2.8
+pip install vllm flashinfer-python==0.2.2.post1
 git clone git@github.com:open-compass/human-eval.git
 cd human-eval && pip install -e .
 
@@ -77,7 +77,7 @@ pip install -r requirements.txt
 
 ## 📚 Data
 
-View and download all data from huggingface [Word2Li/MiddOptimized](https://huggingface.co/datasets/Word2Li/MiddOptimized) then convert each split to `.json` or `.jsonl` file. Regist data in `dataset_info.jsonl` file and edit training yaml script (e.g. [`train_llama.yaml`](scripts/train_llama.yaml)) file according to LLaMA-Factory [Data Preparation](https://github.com/hiyouga/LLaMA-Factory#data-preparation).
+View and download all data from huggingface [Word2Li/MiddOptimized](https://huggingface.co/datasets/Word2Li/MiddOptimized) then convert each split to `.json` or `.jsonl` file. Register data in `dataset_info.jsonl` file and edit training yaml script (e.g. [`train_llama.yaml`](scripts/train_llama.yaml)) file according to LLaMA-Factory [Data Preparation](https://github.com/hiyouga/LLaMA-Factory#data-preparation).
 
 ## 🤖 Training
 
