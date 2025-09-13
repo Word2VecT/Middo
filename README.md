@@ -7,7 +7,7 @@
     <a href="https://huggingface.co/collections/Word2Li/middo-68c27d3b42f79febf7f6312c"><img src="https://img.shields.io/badge/🤗 HuggingFace-Data & Models-green"></a>
 </p>
 
-🎉🎉: Middo is accepted EMNLP 2025 (main).
+🎉🎉 Middo is accepted EMNLP 2025 (Main)! 🎉🎉
 
 We introduce **Middo**, a self-evolving **M**odel-**i**nformed **d**ynamic **d**ata **o**ptimization framework that uses model-aware data selection and context-preserving data refinement. Middo establishes a closed-loop optimization system:
 
@@ -21,7 +21,7 @@ Middo consistently enhances the quality of seed data and boosts LLM's performanc
 
 ![Result](imgs/result.png)
 
-We release Midoo optimized datasets (MiddOptimized)、Midoo only high quality datasets (MiddOnly) and corresponing models fine-tuned on one of MiddOptimized dataset's split.
+We release Midoo optimized datasets (MiddOptimized) and corresponding models fine-tuned on one of MiddOptimized dataset's split.
 
 | Dataset/Model | Avg. Performance | Improvement | HuggingFace🤗 |
 | - | :-: | :-: | :-: |
@@ -29,9 +29,9 @@ We release Midoo optimized datasets (MiddOptimized)、Midoo only high quality da
 | Llama3.1-8B-Middo-Alpaca | $39.63$ | $7.15$ | [Model Link](https://huggingface.co/Word2Li/Llama3.1-8B-Middo-Alpaca) |
 | Llama3.1-8B-Middo-Alpaca-4o-mini | $42.96$ | $2.20$ | [Model Link](https://huggingface.co/Word2Li/Llama3.1-8B-Middo-Alpaca-4o-mini) |
 | Llama3.1-8B-Middo-Wizard | $42.80$ | $3.84$ | [Model Link](https://huggingface.co/Word2Li/Llama3.1-8B-Middo-Wizard) |
-| Mistral-v0.3-Middo-Alpaca | $29.72$ | $4.75$ | [Model Link](https://huggingface.co/Word2Li/Mistral-v0.3-Middo-Alpaca) |
-| Mistral-v0.3-Middo-Alpaca-4o-mini | $35.08$ | $0.52$ | [Model Link](https://huggingface.co/Word2Li/Mistral-v0.3-Middo-Alpaca-4o-mini) |
-| Mistral-v0.3-Middo-Wizard | $38.56$ | $3.64$ | [Model Link](https://huggingface.co/Word2Li/Mistral-v0.3-Middo-Wizard) |
+| Mistral-v0.3-7B-Middo-Alpaca | $29.72$ | $4.75$ | [Model Link](https://huggingface.co/Word2Li/Mistral-v0.3-Middo-Alpaca) |
+| Mistral-v0.3-7B-Middo-Alpaca-4o-mini | $35.08$ | $0.52$ | [Model Link](https://huggingface.co/Word2Li/Mistral-v0.3-Middo-Alpaca-4o-mini) |
+| Mistral-v0.3-7B-Middo-Wizard | $38.56$ | $3.64$ | [Model Link](https://huggingface.co/Word2Li/Mistral-v0.3-Middo-Wizard) |
 
 ## 🎯 Quick Start
 
@@ -132,7 +132,7 @@ Many thanks to
 - [OpenCompass](https://github.com/open-compass/opencompass)
 - [DataDreamer](https://github.com/datadreamer-dev/DataDreamer)
 
-## Citation
+## 📝 Citation
 
 If you find our code, model, or data are useful, please kindly cite our [paper](https://arxiv.org/abs/2508.21589):
 
