@@ -8,16 +8,15 @@ EXP_NAME=$(basename "$MODEL_PATH")
 OUTPUT_FILE="opencompass/opencompass/configs/models/middo/${EXP_NAME}.py"
 
 cat << EOF > ${OUTPUT_FILE}
-from opencompass.models import VLLM
+from opencompass.models import VLLMwithChatTemplate
 
 models = [
     dict(
-        type=VLLM,
-        abbr='mistral-7b-v0.3-vllm',
+        type=VLLMwithChatTemplate,
+        abbr='llama-3_1-8b-instruct-vllm',
         path='${MODEL_PATH}',
-        model_kwargs=dict(dtype='bfloat16', tensor_parallel_size=1),
+        model_kwargs=dict(tensor_parallel_size=1),
         max_out_len=4096,
-        max_seq_len=4096,
         batch_size=64,
         generation_kwargs=dict(temperature=0),
         run_cfg=dict(num_gpus=1),

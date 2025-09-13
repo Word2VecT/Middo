@@ -13,7 +13,7 @@ from opencompass.models import VLLMwithChatTemplate
 models = [
     dict(
         type=VLLMwithChatTemplate,
-        abbr='llama-3_1-8b-instruct-vllm',
+        abbr='mistral-7b-instruct-v0.3-vllm',
         path='${MODEL_PATH}',
         model_kwargs=dict(tensor_parallel_size=1),
         max_out_len=4096,
