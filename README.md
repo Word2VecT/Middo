@@ -21,11 +21,12 @@ Middo consistently enhances the quality of seed data and boosts LLM's performanc
 
 ![Result](imgs/result.png)
 
-We release Midoo optimized datasets (MiddOptimized) and corresponding models fine-tuned on one of MiddOptimized dataset's split.
+We release Midoo optimized datasets (MiddOptimized)、Midoo generated only datasets (MiddOnly) and corresponding models fine-tuned on one of MiddOptimized dataset's split.
 
 | Dataset/Model | Avg. Performance | Improvement | HuggingFace🤗 |
 | - | :-: | :-: | :-: |
 | MiddOptimized | - | - | [Dataset Link](https://huggingface.co/datasets/Word2Li/MiddOptimized) |
+| MiddOnly | - | - | [Dataset Link](https://huggingface.co/datasets/Word2Li/MiddOnly) |
 | Llama3.1-8B-Middo-Alpaca | $39.63$ | $7.15$ | [Model Link](https://huggingface.co/Word2Li/Llama3.1-8B-Middo-Alpaca) |
 | Llama3.1-8B-Middo-Alpaca-4o-mini | $42.96$ | $2.20$ | [Model Link](https://huggingface.co/Word2Li/Llama3.1-8B-Middo-Alpaca-4o-mini) |
 | Llama3.1-8B-Middo-Wizard | $42.80$ | $3.84$ | [Model Link](https://huggingface.co/Word2Li/Llama3.1-8B-Middo-Wizard) |
