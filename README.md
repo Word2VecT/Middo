@@ -138,13 +138,29 @@ Many thanks to
 If you find our code, model, or data are useful, please kindly cite our [paper](https://arxiv.org/abs/2508.21589):
 
 ```bibtex
-@misc{tang2025middomodelinformeddynamicdata,
-      title={Middo: Model-Informed Dynamic Data Optimization for Enhanced LLM Fine-Tuning via Closed-Loop Learning}, 
-      author={Zinan Tang and Xin Gao and Qizhi Pei and Zhuoshi Pan and Mengzhang Cai and Jiang Wu and Conghui He and Lijun Wu},
-      year={2025},
-      eprint={2508.21589},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2508.21589}, 
+@inproceedings{tang-etal-2025-middo,
+    title = "Middo: Model-Informed Dynamic Data Optimization for Enhanced {LLM} Fine-Tuning via Closed-Loop Learning",
+    author = "Tang, Zinan  and
+      Gao, Xin  and
+      Pei, Qizhi  and
+      Pan, Zhuoshi  and
+      Cai, Mengzhang  and
+      Wu, Jiang  and
+      He, Conghui  and
+      Wu, Lijun",
+    editor = "Christodoulopoulos, Christos  and
+      Chakraborty, Tanmoy  and
+      Rose, Carolyn  and
+      Peng, Violet",
+    booktitle = "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing",
+    month = nov,
+    year = "2025",
+    address = "Suzhou, China",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.emnlp-main.350/",
+    doi = "10.18653/v1/2025.emnlp-main.350",
+    pages = "6871--6891",
+    ISBN = "979-8-89176-332-6",
+    abstract = "Supervised Fine-Tuning (SFT) Large Language Models (LLM) fundamentally rely on high-quality training data. While data selection and data synthesis are two common strategies to improve data quality, existing approaches often face limitations in static dataset curation that fail to adapt to evolving model capabilities. In this paper, we introduce \textbf{Middo}, a self-evolving \textbf{M}odel-\textbf{i}nformed \textbf{d}ynamic \textbf{d}ata \textbf{o}ptimization framework that uses model-aware data selection and context-preserving data refinement. Unlike conventional one-off filtering/synthesis methods, our framework establishes a closed-loop optimization system: (1) A self-referential diagnostic module proactively identifies suboptimal samples through tri-axial model signals - \textit{loss patterns (complexity)}, \textit{embedding cluster dynamics (diversity)}, and \textit{self-alignment scores (quality)}; (2) An adaptive optimization engine then transforms suboptimal samples into pedagogically valuable training points while preserving semantic integrity; (3) This optimization process continuously evolves with model capability through dynamic learning principles. Experiments on multiple benchmarks demonstrate that our consistently enhances the quality of seed data and boosts LLM{'}s performance with improving accuracy by $7.15%$ on average while maintaining the original dataset scale. This work establishes a new paradigm for sustainable LLM training through dynamic human-AI co-evolution of data and models."
 }
 ```
