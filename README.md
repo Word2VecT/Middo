@@ -4,7 +4,8 @@
 <p align="center">
     <a href="https://arxiv.org/abs/2508.21589"><img src="https://img.shields.io/badge/📄-Paper-red"></a>
     <a href="https://github.com/Word2VecT/Middo/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Word2VecT/Middo"></a>
-    <a href="https://huggingface.co/collections/Word2Li/middo-68c27d3b42f79febf7f6312c"><img src="https://img.shields.io/badge/🤗 HuggingFace-Data & Models-green"></a>
+    <a href="https://huggingface.co/collections/Word2Li/emnlp-2025-main-middo"><img src="https://img.shields.io/badge/🤗 HuggingFace-Data & Models-green"></a>
+    <a href="https://zinantang.pages.dev/middo/"><img src="https://img.shields.io/badge/Middo-Project_Page-purple?logo=homepage&logoColor=violet"/> </a>
 </p>
 
 🎉🎉 Middo is accepted EMNLP 2025 (Main)! 🎉🎉
